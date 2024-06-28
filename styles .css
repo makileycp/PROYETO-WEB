@@ -1,0 +1,124 @@
+/* Estilos generales para el cuerpo del documento */
+body {
+    font-family: Arial, Helvetica, sans-serif; /* Define la fuente para todo el documento */
+    margin: 0; /* Elimina el margen predeterminado */
+    padding: 0; /* Elimina el relleno predeterminado */
+}
+
+/* Estilos para el contenido principal */
+main {
+    padding: 2rem; /* Espaciado interno */
+    max-width: 1200px; /* Ancho máximo del contenido */
+    margin: 0 auto; /* Centra el contenido en pantallas grandes */
+}
+
+/* Estilos para la sección de productos */
+.productos {
+    padding: 2rem; /* Espaciado interno */
+    text-align: center; /* Centra el texto */
+    display: flex; /* Flexbox para alinear elementos horizontalmente */
+    justify-content: space-around; /* Espacio entre los productos */
+}
+
+/* Estilos para el contenedor de productos */
+.productos-container {
+    display: grid; /* Usar grid para el diseño de los productos */
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Ajuste automático del tamaño de las celdas */
+    gap: 1rem; /* Espacio entre las celdas */
+}
+
+/* Estilos para cada producto individual */
+.producto {
+    flex: 0 0 calc(25% - 1rem); /* Reducir tamaño del producto a un 25% del contenedor menos 1rem de espacio */
+    padding: 1rem; /* Espaciado interno */
+    text-align: center; /* Centra el texto */
+    border: 1px solid #ccc; /* Borde del producto con color gris claro */
+    box-sizing: border-box; /* Incluye el borde y el padding en el cálculo del tamaño total del producto */
+    margin-bottom: 1rem; /* Espacio inferior entre productos */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Sombra ligera alrededor del producto */
+    border-radius: 8px; /* Esquinas redondeadas del producto */
+    display: flex; /* Flexbox para alinear elementos verticalmente */
+    flex-direction: column; /* Alinear elementos en columna dentro del producto */
+    justify-content: center; /* Centrar verticalmente los elementos dentro del producto */
+}
+
+/* Efecto al pasar el cursor sobre cada producto */
+.producto:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Sombra más intensa al pasar el cursor */
+}
+
+/* Estilos para las imágenes dentro de cada producto */
+.producto img {
+    width: 100%; /* Ancho completo para adaptarse al contenedor */
+    height: auto; /* Altura automática para mantener la proporción */
+    border-radius: 8px; /* Esquinas redondeadas */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra ligera */
+    transition: transform 0.3s ease; /* Transición suave para el efecto al pasar el cursor */
+}
+
+/* Efecto al pasar el cursor sobre las imágenes */
+.producto img:hover {
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* Sombra más intensa al pasar el cursor */
+    transform: scale(1.05); /* Efecto de escala al pasar el cursor */
+}
+
+/* Estilos para el título dentro de cada producto */
+.producto h3 {
+    margin-top: 0.5rem; /* Espaciado superior */
+}
+
+/* Estilos para el párrafo dentro de cada producto */
+.producto p {
+    margin-bottom: 0.5rem; /* Espaciado inferior */
+}
+
+/* Estilos para el botón dentro de cada producto */
+.producto button {
+    background: linear-gradient(to right, violet, indigo, blue, green, yellow, orange, red); /* Degradado de colores arco iris */
+    color: white; /* Color del texto */
+    border: none; /* Elimina el borde predeterminado */
+    padding: 0.5rem 1rem; /* Espaciado interno */
+    cursor: pointer; /* Cursor de mano al pasar sobre el botón */
+    display: inline-block; /* Alinea el botón en línea con el texto */
+    vertical-align: middle; /* Alinea verticalmente el texto */
+    border-radius: 4px; /* Borde redondeado */
+    position: relative; /* Posición relativa para usar el pseudo-elemento before */
+    overflow: hidden; /* Oculta el desbordamiento */
+}
+
+/* Efecto antes de que el botón se desplace */
+.producto button::before {
+    content: ''; /* Contenido vacío */
+    position: absolute; /* Posición absoluta */
+    top: 0; /* Alineado al top */
+    left: -50%; /* Desplazado a la izquierda */
+    width: 200%; /* Ancho del degradado */
+    height: 100%; /* Altura completa */
+    background: linear-gradient(to right, violet, indigo, blue, green, yellow, orange, red); /* Degradado de colores arco iris */
+    transition: left 0.6s linear; /* Transición suave del movimiento */
+}
+
+/* Efecto al pasar el cursor sobre el botón */
+.producto button:hover::before {
+    left: 150%; /* Desplaza el degradado a la derecha al pasar el cursor */
+}
+
+.producto button:hover {
+    color: white; /* Cambia el color del texto al pasar el cursor */
+}
+
+/* Media queries para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .productos {
+        flex-direction: column; /* Cambia a columna en pantallas más pequeñas */
+    }
+
+    .productos-container {
+        grid-template-columns: repeat(auto-fill, minmax(100%, 1fr)); /* Columna única en pantallas más pequeñas */
+    }
+
+    .producto {
+        flex: 0 0 calc(100% - 1rem); /* Ancho completo menos el espacio entre productos */
+        margin-bottom: 1rem; /* Espacio inferior entre productos */
+    }
+}

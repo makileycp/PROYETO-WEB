@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras</title>
+    <link rel="stylesheet" href="carrito.css">
+    <link rel="stylesheet" href="encabezado.css">
+    <link rel="stylesheet" href="encabezado.css">
+    <link rel="shortcut icon" href="img/favicon.ico.png" type="image/x-icon">
+
+</head>
+<body>
+    <header>
+        <img class="logo" src="/img/logo empresa.png" alt="Logo de Almanaque">
+        <h1 class="logo-text">ALMANAQUE</h1>
+        <nav>
+            <ul>
+                <li><a href="inicio.html">Inicio</a></li>
+                <li><a href="producto.html">Productos</a></li>
+                <li><a href="carrito.html">Carrito</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="cart">
+        <h2>Carrito de Compras</h2>
+        <ul class="cart-items">
+            <li class="cart-item">
+                <span class="item-name">Producto 1</span>
+                <span class="item-price">$20.00</span>
+                <button class="remove-item">Eliminar</button>
+            </li>
+            <li class="cart-item">
+                <span class="item-name">Producto 2</span>
+                <span class="item-price">$30.00</span>
+                <button class="remove-item">Eliminar</button>
+            </li>
+        </ul>
+        <div class="cart-total">
+            <span>Total:</span>
+            <span class="total-price">$50.00</span>
+        </div>
+        <button class="checkout-button">Pagar</button>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 Tienda de Ropa para Varones</p>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>

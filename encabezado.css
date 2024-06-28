@@ -1,0 +1,68 @@
+/* Estilos para el encabezado */
+header {
+    background-color: #333; /* Fondo oscuro */
+    color: white; /* Texto blanco */
+    padding: 1rem; /* Espaciado interno */
+    text-align: center; /* Centra el texto */
+    display: flex; /* Flexbox para alinear elementos */
+    justify-content: space-between; /* Espacio entre elementos */
+    align-items: center; /* Alinea elementos verticalmente */
+}
+
+/* Estilos para el logo dentro del encabezado */
+.logo {
+    padding: 10px 0; /* Espaciado interno */
+    display: flex; /* Flexbox para alinear elementos horizontalmente */
+    align-items: center; /* Alinea elementos verticalmente */
+    max-width: 100px; /* Ancho máximo */
+    margin-right: 10px; /* Espacio a la derecha del logo */
+}
+
+/* Estilos para el texto del logo */
+.logo-text {
+    font-size: 2rem; /* Tamaño de la fuente */
+    margin: 0; /* Elimina los márgenes predeterminados */
+    padding: 0; /* Elimina el relleno predeterminado */
+    transition: transform 0.3s ease; /* Transición suave para el efecto al pasar el cursor */
+}
+
+/* Efecto al pasar el cursor sobre el texto del logo */
+.logo-text:hover {
+    transform: rotateY(2turn); /* Rotación de 2 vueltas completas al pasar el cursor */
+}
+
+/* Estilos para la lista de navegación */
+nav ul {
+    list-style-type: none; /* Elimina los puntos de lista */
+    padding: 0; /* Elimina el relleno predeterminado */
+    margin: 0; /* Elimina los márgenes predeterminados */
+    display: flex; /* Flexbox para alinear elementos horizontalmente */
+}
+
+/* Estilos para los elementos de la lista de navegación */
+nav ul li {
+    margin-left: 1rem; /* Espacio a la izquierda de cada elemento */
+}
+
+nav ul li:first-child {
+    margin-left: 0; /* Elimina el margen izquierdo del primer elemento */
+}
+
+/* Estilos para los enlaces de navegación */
+nav ul li a {
+    color: white; /* Color del texto */
+    text-decoration: none; /* Elimina la subrayado */
+}
+/*--------------------------------------------------------------------------------------------------------*/
+
+/* Estilos para el pie de página */
+footer {
+    background-color: #333; /* Fondo oscuro */
+    color: white; /* Texto blanco */
+    text-align: center; /* Centra el texto */
+    padding: 1em; /* Espaciado interno */
+    position: fixed; /* Fija el pie de página al fondo */
+    width: 100%; /* Ancho completo */
+    bottom: 0; /* Posicionado en la parte inferior */
+}
+

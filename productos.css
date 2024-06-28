@@ -1,0 +1,74 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  background-image: url(POLOS/fondo.jpg);
+  
+
+}
+
+main {
+    padding: 100px;
+    
+}
+main h2 {
+   
+    color: #ffffff;
+    border:solid;
+}
+
+
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 10px;
+    flex: 1;
+}
+
+.product-item {
+    background-color: #fff;
+    padding: 20%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.product-item img {
+    width: 125px;
+    height:225px ;
+    border-bottom: 1px solid #000000;
+    padding-bottom: 15px;
+  position: center;
+}
+
+.product-item h2 {
+    font-size: 1.5em;
+    margin: 15px 0;
+}
+
+.product-item .price {
+    color: #b12704;
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.product-item p {
+    margin: 10px 0;
+}
+
+.product-item button {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.product-item button:hover {
+    background-color: #218838;
+}
+
